@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail</title>
+</head>
+<body>
+	<h1>Your note</h1>
+	<h2>{{note.title}}</h2>
+<p>{{note.content}}</p>
+{% for img in note.images.all %}
+	<img src="{{ img.image.url }}" alt="...">
+{% endfor %}
+</body>
+</html>

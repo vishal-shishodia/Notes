@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Home</title>
+</head>
+<body>
+	<h2> Admin Page</h2>
+	<h1>Welcome {{request.user}} </h1>
+	<h3>User List</h3>
+	<div>
+	{% for profile in profiles %}
+	<ul>
+	<li>
+	<p><strong>{{profile.user.username}}</strong> has {{profile.note_count}} notes.</p>
+	</li>
+	</ul>
+	{% endfor %}
+    </div>
+	<br>
+	<p><a href="{% url 'register' %}"> Create user </a></p>
+	<p><a href='http://127.0.0.1:8000/admin' > Manage Database </a></p>
+
+</body>
+</html>
